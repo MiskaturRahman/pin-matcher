@@ -32,11 +32,11 @@ function deleteNumber() {
 const submit = document.getElementById("submit");
 submit.addEventListener('click', function () {
     if (document.getElementById("displayRandomNumber").value == document.getElementById("enterNumber").value) {
-        alert("Pin matching successful");
+        alert("✅ Pin Matched... Secret door is opening for you");
 
     }
     else {
-        alert("no match");
+        alert("❌ Pin Didn't Match, Please try again");
     }
 })
 
