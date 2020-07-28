@@ -11,53 +11,53 @@
   </head>
 
   <body>
+      <h1>Pin Matcher</h1>
       <div class="container">
           <div class="row">
               <div class="col-md-6">
                   <div class="pin-generator half-width">
-                      <input class="form-control" type="text">
-                      <button class="generate-btn">Generate Pin</button>
+                      <input id="displayRandomNumber" class="form-control" type="text">
+                      <button id="generateNumber" class="generate-btn">Generate Pin</button>
                   </div>
               </div>
               <div class="col-md-6">
                   <div class="input-section half-width">
-                      <input class="form-control" type="text">
+                      <input class="form-control" id="enterNumber" type="text" maxlength="10">
                       <div class="numbers">
                           <div class="calc-body">
                               <div class="calc-button-row">
-                                  <div class="button">7</div>
-                                  <div class="button">8</div>
-                                  <div class="button">9</div>
+                                  <div class="button" onclick="enterNumber(7)">7</div>
+                                  <div class="button" onclick="enterNumber(8)">8</div>
+                                  <div class="button" onclick="enterNumber(9)">9</div>
                               </div>
                               <div class="calc-button-row">
-                                  <div class="button">4</div>
-                                  <div class="button">5</div>
-                                  <div class="button">6</div>
+                                  <div class="button" onclick="enterNumber(4)">4</div>
+                                  <div class="button" onclick="enterNumber(5)">5</div>
+                                  <div class="button" onclick="enterNumber(6)">6</div>
                               </div>
                               <div class="calc-button-row">
-                                  <div class="button">1</div>
-                                  <div class="button">2</div>
-                                  <div class="button">3</div>
+                                  <div class="button" onclick="enterNumber(1)">1</div>
+                                  <div class="button" onclick="enterNumber(2)">2</div>
+                                  <div class="button" onclick="enterNumber(3)">3</div>
                               </div>
                               <div class="calc-button-row">
-                                  <div class="button">
-                                      <</div> <div class="button">0
+                                  <div class="button" onclick="deleteNumber()">
+                                      <</div> <div class="button" onclick="enterNumber(0)">0
                                   </div>
-                                  <div class="button">C</div>
+                                  <div class="button" onclick="clearData()">C</div>
                               </div>
                               <div>
-                                  <button type="submit" class="submit-btn">Submit</button>
+                                  <button type="submit" id="submit" class="submit-btn">Submit</button>
                                   <p class="action-left">3 try left</p>
                               </div>
                           </div>
                       </div>
                   </div>
               </div>
-              <div class="notify-section">
-                  <p class="notify">❌ Pin Didn't Match, Please try again</p>
-                  <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
-              </div>
+
           </div>
+
+          <script src="script.js"></script>
   </body>
 
   </html>
